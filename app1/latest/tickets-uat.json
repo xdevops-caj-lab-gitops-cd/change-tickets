@@ -1,0 +1,52 @@
+{
+    "releaseticket": {
+        "summary": "Deploy v1.2.0",
+        "description": "Description of the deployment",
+        "environment": "UAT",
+        "version": "1.2.0",
+        "islatest": true,
+        "changeapproval": {
+            "id": "CR-1",
+            "approved": true,
+            "validtime": "2024-12-11 02:30"
+        }
+    },
+    "deploymenttasks": [
+        {
+            "name": "iac-deploy",
+            "type": "iac",
+            "scheduleddeployment": {
+                "scheduleddeployment": true,
+                "deploymentstarttime": "2024-12-10 22:30"
+            },
+            "params": [
+                {
+                    "name": "param1",
+                    "value": "value1"
+                },
+                {
+                    "name": "param2",
+                    "value": "value2"
+                }
+            ]
+        },
+        {
+            "name": "app-deploy",
+            "type": "app",
+            "scheduleddeployment": {
+                "scheduleddeployment": true,
+                "deploymentstarttime": "2024-12-10 23:00"
+            },
+            "params": [
+                {
+                    "name": "param1",
+                    "value": "value1"
+                },
+                {
+                    "name": "param2",
+                    "value": "value2"
+                }
+            ]
+        },
+    ]
+}
