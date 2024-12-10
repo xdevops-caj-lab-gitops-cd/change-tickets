@@ -13,6 +13,24 @@
     },
     "deploymenttasks": [
         {
+            "name": "db-change",
+            "type": "db",
+            "scheduleddeployment": {
+                "scheduleddeployment": true,
+                "deploymentstarttime": "2024-12-10 22:00"
+            },
+            "params": [
+                {
+                    "name": "param1",
+                    "value": "value1"
+                },
+                {
+                    "name": "param2",
+                    "value": "value2"
+                }
+            ]
+        },
+        {
             "name": "iac-deploy",
             "type": "iac",
             "scheduleddeployment": {
