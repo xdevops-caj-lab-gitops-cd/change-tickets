@@ -33,6 +33,7 @@
         {
             "name": "iac-deploy",
             "type": "iac",
+            "runafter": "db-change",
             "scheduleddeployment": {
                 "scheduleddeployment": true,
                 "deploymentstarttime": "2024-12-10 22:30"
@@ -49,8 +50,9 @@
             ]
         },
         {
-            "name": "app-deploy",
+            "name": "common-service-deploy",
             "type": "app",
+            "runafter": "db-change",
             "scheduleddeployment": {
                 "scheduleddeployment": true,
                 "deploymentstarttime": "2024-12-10 23:00"
@@ -66,5 +68,24 @@
                 }
             ]
         },
+        {
+            "name": "default-deploy",
+            "type": "app",
+            "runafter": "common-service-deploy",
+            "scheduleddeployment": {
+                "scheduleddeployment": true,
+                "deploymentstarttime": "2024-12-10 23:00"
+            },
+            "params": [
+                {
+                    "name": "param1",
+                    "value": "value1"
+                },
+                {
+                    "name": "param2",
+                    "value": "value2"
+                }
+            ]
+        }
     ]
 }

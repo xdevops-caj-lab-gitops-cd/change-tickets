@@ -1,0 +1,32 @@
+{
+    "releaseticket": {
+        "summary": "Deploy v1.2.0",
+        "description": "Description of the deployment",
+        "environment": "UAT",
+        "version": "1.2.0",
+        "islatest": true,
+        "changeapproval": {
+            "id": "CR-1",
+            "approved": true,
+            "validtime": "2024-12-11 02:30"
+        }
+    },
+    "deploymenttasks": [
+        {
+            "name": "db-change",
+            "deploystatus": {
+                "status": "success",
+                "message": "OK",
+                "deploymentendtime": "2024-12-10 22:10"
+            }
+        },
+        {
+            "name": "default-deploy",
+            "deploystatus": {
+                "status": "success",
+                "message": "OK",
+                "deploymentendtime": "2024-12-10 23:10"
+            }
+        }
+    ]
+}
