@@ -14,7 +14,7 @@
     "deploymenttasks": [
         {
             "name": "db-change",
-            "deploystatus": {
+            "deploymentstatus": {
                 "status": "success",
                 "message": "OK",
                 "deploymentendtime": "2024-12-10 22:10"
@@ -22,7 +22,7 @@
         },
         {
             "name": "default-deploy",
-            "deploystatus": {
+            "deploymentstatus": {
                 "status": "success",
                 "message": "OK",
                 "deploymentendtime": "2024-12-10 23:10"
